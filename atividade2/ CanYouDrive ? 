@@ -1,0 +1,15 @@
+def verificar_par_impar():
+    valor = input("Digite um número: ")
+
+    # Tenta converter o valor para um inteiro
+    if not valor.isdigit() and not (valor.startswith('-') and valor[1:].isdigit()):
+        return "Valor informado é inválido."
+
+    numero = int(valor)
+
+    # Retorna True se par, False se ímpar
+    return numero % 2 == 0
+
+# Chamada da função e impressão do resultado
+resultado = verificar_par_impar()
+print(resultado)
